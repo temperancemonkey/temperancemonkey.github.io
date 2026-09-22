@@ -1,0 +1,138 @@
+body{
+    /* font-family: "Plus Jakarta Sans", sans-serif; */
+    font-family: "Google Sans Code", monospace;
+    overflow: hidden;
+    user-select: none;
+    background-color: white;
+
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark{
+    background-color: rgb(218, 218, 218);
+    color: blue;
+}
+
+body.dark a{
+    color: blue;
+}
+
+body.dark a:hover{
+    color: black;
+}
+
+body.dark .container{
+    border: blue solid 2px;
+}
+
+body.dark button{
+    color: blue;
+}
+
+body.dark button:hover{
+    color: black;
+}
+
+body.dark .header:hover{
+    color: black;
+}
+
+.container{
+    margin: 2vw;
+    padding: 30px;
+
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    border: black solid 2px;
+
+    filter: url(#distort);
+
+    transition: rotate 2s ease;
+}
+
+.header{
+    font-size: 1.8vw;
+    cursor: grab;
+}
+
+.header:hover{
+    color: rgb(68, 0, 255);
+}
+
+.info{
+    text-align: center;
+    font-size: 1vw;
+    margin-bottom: 2vw;
+
+    transition: transform .5s ease;
+}
+
+.work{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    font-size: 1.2vw;   
+    transition: transform .5s ease;
+
+}
+
+a{
+    text-decoration: underline;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+button{
+    border: none;
+    justify-self: center;
+    align-self: center;
+
+    background-color: transparent;
+    font-family: "Google Sans Code", monospace;
+    font-size: 1.5vw;
+
+    filter: url(#distort);
+    cursor: grab;
+}
+
+button:hover{
+    color: blue;
+}
+
+
+@media (max-width: 800px){
+
+    .container{
+        border: black solid 1px;
+    }
+    
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* javascript idea: each time you open website or reload  it randomly tilts the square 
+    maybe the contents inside can slide around if viewer somehow is able to rotate square*/
+
+    /* for now maybe with css translation on hover the words can just slip around */
