@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Google Sans Code", monospace;
+    overflow-x: hidden;
+    user-select: none;
+    background-color: rgb(236, 236, 236);
+
+    filter: url(#distort);
+}
