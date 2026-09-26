@@ -1,52 +1,44 @@
-function addBox(rotation, color) {
 
-    const text = document.createElement('p');
-    const letter = document.createElement('p');
+const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12'];
 
 
-    text.textContent = 'a';
-    text.style.width = '250px';
-    text.style.height = '250px';
-    text.style.fontSize = "50vw";
-    text.style.color = 'black';
+function addLetter (ourRotation, label) {
 
-    letter.textContent = 'g';
-    letter.style.width = '250px';
-    letter.style.height = '250px';
-    letter.style.fontSize = "50vw";
-    letter.style.color = 'black';
+    const numberEl = document.createElement('p');
+    const ticks = document.createElement('p');
 
 
-    text.style.transform = 'rotate(' + rotation + 'deg)';
-    letter.style.transform = 'rotate(' + rotation + 'deg)';
+    ticks.style.width = '35px';
+    ticks.style.height = '5px';
+    ticks.style.backgroundColor = 'black';
+
+    ticks.style.position = 'absolute';
+    ticks.style.top = '250px';
+
+    numberEl.textContent = label;
+    numberEl.style.fontSize = '50px';
+    numberEl.style.color = 'black';
+
+    numberEl.style.position = 'absolute';
+    numberEl.style.top = '250px';
 
 
-    document.body.appendChild(text);
-    document.body.appendChild(letter);
-}
 
-const colors = [
-    'black', 'gray', 'yellow', 'brown', 'blue', 'purple',
-    'pink', 'brown', 'teal', 'navy', 'maroon', 'olive',
-    'lime', 'cyan', 'magenta', 'gold', 'coral', 'turquoise',
-    'indigo', 'violet', 'silver'
-];
 
-let colorIndex = 0;
-
-for (let i = 0; i < 300; i = i + 1) {
-
-    if (colorIndex >= colors.length) {
-        colorIndex = 0;
-    }
-
-    addBox(i * 22.5, colors[colorIndex]);
+    ticks.style.transform = `rotate(${ourRotation}deg) translate(300px)`;
+    numberEl.style.transform = `rotate(${ourRotation}deg) translate(250px)`;
     
 
-    colorIndex = colorIndex + 1;
-}
+    document.body.appendChild(ticks);
+    document.body.appendChild(numberEl);
 
+};
 
+for (let i = 0; i < 12; i = i + 1) {
+
+    addLetter (i * (360/12), numbers[i]);
+
+};
 
 
 
