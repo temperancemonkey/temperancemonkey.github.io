@@ -1,32 +1,42 @@
 body{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 5%;
-    width: 100%;
-    height: auto;
-
-
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    margin: 0;
+
 
     font-family: "Google Sans Code", monospace;
-    overflow-x: hidden;
+    overflow: hidden;
     user-select: none;
     background-color: rgb(236, 236, 236);
 
     filter: url(#distort);
 }
 
+.circle{
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    border: solid black 4px;
+}
 
 .dot{
- 
+    position: absolute;
     background-color: black;
     width: 12px;
     height: 12px;
     border-radius: 50%;
+    z-index: 1;
+}
 
-    
+#clock{
+    position: relative;
+    width: 800px;
+    height: 800px;
+
+    rotate: 300deg;
 }
 
 
