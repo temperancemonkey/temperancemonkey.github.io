@@ -2,12 +2,11 @@ const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10','11', '12'];
 
 const clock = document.getElementById('clock');
 
-function addEl(ourRotation, label, randomRotation) {
+function addEl(ourRotation, label) {
 
     const ticks = document.createElement('div');
     const numberEl = document.createElement('p');
-    const armOne = document.createElement('div');
-    const armTwo = document.createElement('div');
+
 
 
     ticks.style.position = 'absolute';
@@ -30,51 +29,40 @@ function addEl(ourRotation, label, randomRotation) {
     numberEl.style.color = 'black';
     numberEl.style.transform = `translate(-50%, -50%) rotate(${ourRotation}deg) translate(280px)`;
 
-    armOne.style.position = 'absolute';
-    armOne.style.margin = '0';
-    armOne.style.left = '50%'
-    armOne.style.top = '50%'
-    armOne.style.width = '245px';
-    armOne.style.height = '4px';
-    armOne.style.backgroundColor = 'purple';
 
-    armOne.style.transform = `rotate(${randomRotation}deg)`;
+    clock.append(numberEl, ticks);
 
-
-
-    armTwo.style.position = 'absolute';
-    armTwo.style.margin = '0';
-    armTwo.style.left = '50%'
-    armTwo.style.top = '50%'
-    armTwo.style.width = '130px';
-    armTwo.style.height = '4px';
-    armTwo.style.backgroundColor = 'red';
-
-    armTwo.style.transform = `rotate(${randomRotation}deg)`;
-
-    clock.append(numberEl, ticks, armOne, armTwo);
 
 }
 
-const randomRotation = Math.random() * 360;
+function addArm(randomRotation) {
+
+    const arm = document.createElement('div');
+
+    arm.style.position = 'absolute';
+    arm.style.margin = '0';
+    arm.style.left = '50%'
+    arm.style.top = '50%'
+    arm.style.width = '220px';
+    arm.style.height = '4px';
+    arm.style.backgroundColor = 'black';
+    
+    arm.style.transformOrigin = '0 50%';
+    arm.style.transform = `rotate(${randomRotation}deg) translate(15px)`;
+
+    clock.append(arm);
+
+}
 
 
 for (let i = 0; i < 12; i = i + 1) {
 
-
-
     setTimeout(function(){
-        addEl (i * 360/12, numbers[i], randomRotation);
-    }, i * 500);
+        addEl (i * 360/12, numbers[i]);
+    }, i * 50);
 
 
 }
 
-
-
-
-
-
-
-
-
+addArm(Math.random() * 360);
+addArm(Math.random() * 360);
