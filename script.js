@@ -38,12 +38,9 @@ function toggleBackground() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
     const myContainer = document.querySelector('.container');
     const randomRotation = Math.random() * 360;
     
-    
-
     myContainer.style.transform = `rotate(${randomRotation}deg)`;
 
 });
