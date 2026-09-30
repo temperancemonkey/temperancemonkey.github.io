@@ -1,17 +1,4 @@
-// const button = document.getElementById('header');
 
-// button.addEventListener('click', toggleBackground);
-
-// function toggleBackground() {
-
-//     const body = document.body;
-
-//     if (body.style.backgroundColor === 'white') {
-//         body.style.backgroundColor = 'yellow)';
-//     } else {
-//         body.style.backgroundColor = 'white)';
-//     }
-// }
 
 const toggle = document.querySelector('.header');
 
@@ -26,20 +13,47 @@ function toggleBackground() {
 
 // ROTATE MECHANISM
 
-const spin = document.getElementById('myButton');
-const myContainer = document.querySelector('.container');
+// const spin = document.getElementById('myButton');
+// const myContainer = document.querySelector('.container');
 
-let currentRotation = 0;
+// let currentRotation = 0;
 
-spin.addEventListener('click', () => {
-    currentRotation += 90;
+// spin.addEventListener('click', () => {
+//     currentRotation += 90;
 
-    myContainer.style.rotate = `${currentRotation}deg`;
+//     myContainer.style.rotate = `${currentRotation}deg`;
+// });
+
+
+// const myContainer = document.querySelector('.container');
+
+// let currentRotation = 0;
+
+// function rotate() {
+
+//     currentRotation += 90;
+//     myContainer.style.rotate = `${currentRotation}deg`;
+
+// };
+
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    const myContainer = document.querySelector('.container');
+    const randomRotation = Math.random() * 360;
+    
+    
+
+    myContainer.style.transform = `rotate(${randomRotation}deg)`;
+
 });
 
-// function rotate(){
-//     document.querySelector('.container').style.rotate = '90deg';
-// }
+
+
+
+
+
+
 
 
 
