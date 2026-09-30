@@ -14,12 +14,12 @@ body{
 }
 
 body.dark{
-    background-color: rgb(218, 218, 218);
-    color: blue;
+    background-color: rgb(206, 191, 255);
+    color: rgb(255, 7, 160);
 }
 
 body.dark a{
-    color: blue;
+    color: rgb(255, 7, 160);
 }
 
 body.dark a:hover{
@@ -27,11 +27,11 @@ body.dark a:hover{
 }
 
 body.dark .container{
-    border: blue solid 2px;
+    border: rgb(255, 7, 160) solid 2px;
 }
 
 body.dark button{
-    color: blue;
+    color: rgb(255, 7, 160);
 }
 
 body.dark button:hover{
@@ -62,7 +62,7 @@ body.dark .header:hover{
 }
 
 .header:hover{
-    color: rgb(68, 0, 255);
+    color: rgb(255, 7, 160);
 }
 
 .info{
@@ -89,26 +89,8 @@ a{
 }
 
 a:hover{
-    color: blue;
+    color: rgb(255, 7, 160);
 }
-
-
-/* button{
-    border: none;
-    justify-self: center;
-    align-self: center;
-
-    background-color: transparent;
-    font-family: "Google Sans Code", monospace;
-    font-size: 1.5vw;
-
-    filter: url(#distort);
-    cursor: grab;
-}
-
-button:hover{
-    color: blue;
-} */
 
 
 @media (max-width: 800px){
